@@ -1,54 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anmol Rangwani | UI/UX Designer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1 class="animated-title">Anmol Rangwani</h1>
-    <p class="tagline">UI/UX Designer crafting immersive and user-first experiences</p>
-    <button class="cta">Explore My Work</button>
-    <div class="floating-cube">
-      <div class="cube-front"></div>
-      <div class="cube-back"></div>
-      <div class="cube-right"></div>
-      <div class="cube-left"></div>
-      <div class="cube-top"></div>
-      <div class="cube-bottom"></div>
-    </div>
+  <header class="header">
+    <h1 class="logo">Anmol Rangwani</h1>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section id="projects">
-    <h2>Selected Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <img src="https://via.placeholder.com/400x250" alt="Project 1">
-        <h3>TrendBoard</h3>
-        <p>Fashion inspiration app designed with Gen Z in mind, using sleek cards and pastel colors.</p>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>Welcome to My Portfolio</h2>
+      <p>I'm a passionate UI/UX designer focused on creating impactful user experiences.</p>
+      <a href="#portfolio" class="cta-button">Explore My Work</a>
+    </div>
+    <!-- Adding 3D shapes to hero section -->
+    <div class="cube"></div>
+    <div class="blob"></div>
+  </section>
+  <section class="profile-photo-section" id="profile">
+    <div class="profile-photo">
+      <img src="assets/images/profile.jpg" alt="Your Name" />
+    </div>
+    <div class="profile-description">
+      <h1>Anmol Rangwani</h1>
+      <p>UI/UX Designer & Web Developer</p>
+      <p>I am an aspiring UI/UX designer and Full Stack Developer, passionate about crafting seamless and intuitive user experiences. I am dedicated to learning and applying the latest design principles and full-stack technologies to build interactive, user-centered applications.</p>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <h2>About Me</h2>
+    <p>As a UI/UX designer, I strive to bring functionality and elegance to every project. I combine design with data-driven insights for effective results.</p>
+    <div class="sphere"></div> <!-- 3D element in the about section -->
+  </section>
+  <section class="skills-section" id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-list">
+      <div class="skill-card">
+        <div class="skill-icon">
+          <img src="ui-ux.svg" alt="UI/UX" />
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>Designing wireframes, mockups, and visually engaging experiences.</p>
       </div>
-      <div class="project">
-        <img src="https://via.placeholder.com/400x250" alt="Project 2">
-        <h3>EduConnect</h3>
-        <p>Ed-tech app for Singapore-India students with video call support and a minimalist design.</p>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <img src="webdev.svg" alt="Web Development" />
+        </div>
+        <h3>Web Development</h3>
+        <p>Building responsive and interactive websites</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <img src="figma.svg" alt="Figma" />
+        </div>
+        <h3>Figma</h3>
+        <p>Prototyping and UI Design with Figma</p>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="portfolio-section" id="portfolio">
+    <h2>My Projects</h2>
+    <div class="card-container">
+      <div class="project-card">
+        <a href="https://www.figma.com/proto/6FU3untiA0Qlc26tJBJmso/Food-ordering-app?node-id=0-1&t=GWcmOsUOUKSnyaum-1">
+          Food ordering app with prototype
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="https://www.figma.com/proto/jofFXwyxSJBoH6l47InPgs/Donuts?node-id=0-1&t=kcJn1EYQfBTczPyY-1">
+          Interactive Donut UI
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="https://www.figma.com/design/koM26hI3FTIEgXqN9YqAg8/Gaming-Console-UI?node-id=0-1&t=43hId8to0NX42WAp-1">
+          Gaming Console UI
+        </a>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section class="contact-section" id="contact">
     <h2>Contact Me</h2>
-    <form class="contact-form" name="contact" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <p>Feel free to connect for collaboration or inquiries!</p>
+    <a href="mailto:anmolrangwanii13@gmail.com?subject=Collaboration%20Inquiry&body=Hello%20Anmol," class="cta-button">Send a Message</a>
   </section>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
