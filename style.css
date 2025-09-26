@@ -10,9 +10,71 @@
     color: #333;
     background: #d6e2e9;
   }
-  
+  /* Header base */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #99c1de;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #0a3d62;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #99c1de;   /* ✅ your bg color */
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    display: none; /* hidden by default */
+  }
+
+  .nav.show {
+    display: flex; /* visible when toggled */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
   /* Header */
-  .header {
+  /* .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,7 +96,7 @@
   
   .nav a:hover {
     color: #fad2e1;
-  }
+  } */
   
   /* Hero Section */
   .hero {

@@ -7,14 +7,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <h1 class="logo">Anmol Rangwani</h1>
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+ <header class="header">
+  <h1 class="logo">Anmol Rangwani</h1>
+
+  <!-- Hamburger Button -->
+  <button class="menu-toggle" id="menu-toggle">☰</button>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+
 
   <section class="hero" id="home">
     <div class="hero-content">
@@ -133,4 +141,13 @@
 
 <script src="script.js"></script>
 </body>
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav");
+
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("show");
+  });
+</script>
+
 </html>
