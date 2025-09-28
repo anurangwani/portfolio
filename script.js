@@ -7,7 +7,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
     });
   });
-  
+  const menuToggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
+const closeBtn = document.getElementById("close-btn");
+const overlay = document.getElementById("overlay");
+
+// Open menu
+menuToggle.addEventListener("click", () => {
+  nav.classList.add("show");
+  overlay.classList.add("show");
+});
+
+// Close menu on ×
+closeBtn.addEventListener("click", () => {
+  nav.classList.remove("show");
+  overlay.classList.remove("show");
+});
+
+// Close menu when clicking outside
+overlay.addEventListener("click", () => {
+  nav.classList.remove("show");
+  overlay.classList.remove("show");
+});
+
   // Hero Section 3D Background Animation
   const hero = document.querySelector('.hero');
   hero.addEventListener('mousemove', (e) => {
